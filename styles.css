@@ -248,6 +248,7 @@
       font-size: 20px;
       line-height: 50px;
       text-align: center;
+      font-weight: 900;
     }
   }
 
@@ -266,7 +267,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1.3rem 3rem;
+    margin: 1rem 3rem 0.3rem 3rem;
   }
 
   .upper input {
@@ -275,29 +276,303 @@
   .main-input-form{
     border-radius: 8px;
     border: 1px solid var(--border);
-    padding: 8px 20px;
+    padding: 8px 10px;
     width: 230px;
     outline: 0;
+    font-size: 0.8rem;
+  }
+  .input-group {
+    /* height: 56px; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .input-group > input{
+    width: 190px;
   }
   .input-group-text {
     border: 1px solid #576575;
-    padding: 8px 14px;
+    width:40px ;
+    padding: 8px 0;
     background-color: #fff;
     border-right: 0px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-  
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   #form-btn > button{
     padding: 0.5rem 2rem;
   }
-/* <!----------------------------------- saad:  mentor section start here   -------------> */
+  .form-error{
+    font-size: 0.8rem;
+    opacity: 1;
+    color: red;
+    margin: 0;
+  }
+  @media screen and (max-width:600px){
+    .form {
+      
+      width: 76%;
+      bottom: -14rem;
+      border-radius: 10px;
+    }
+    .upper{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.3rem 3rem;
+      gap: 1rem;
+    }
+  }
+ 
+  /* <!----------------------------------- sapana:  what will learn section starts here   -------------> */
+.learn-container{
+  display: flex;
+  justify-content: center;
+ margin-top: 1rem;
+}
 
-/* <!----------------------------------- saad:  mentor section ends here   -------------> */
+.learn{
+  width: 90%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+.learn-text{
+  display: flex;
+  justify-content: center;
+}
+.learn-text > p{
+  font-size: 1.5rem;
+  width: 70%;
+  
+}
 
+.learn-text >p > span{
+  color: #0948b3;
+}
+.learn-heading{
+  display: flex;
+  justify-content: center;
+}
 
+.learn-heading > p{
+  font-size: 2rem;
+  font-weight: 600;
+}
 
+.learn-heading > p > span{
+  background: linear-gradient(100deg, #F3BD00 37.5%, #F38300 71.34%);
+  font-family: "satisfy";
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 500;
+
+}
+.learn-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.learn-cards > div{
+  width: 14.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 12px 0px;
+  height: 17rem;
+}
+
+.learn-cards > div > h5{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.learn-cards > div > img{
+  width: 3rem;
+  height: 3rem;
+}
+.learn-cards > div > p{
+  font-weight: 500;
+  font-size: 0.8rem;
+  
+}
+
+@media screen and (max-width:600px){
+  .learn-container{
+   margin-top: 12rem;
+  }
+  .learn{
+    width: 90%;
+    margin-top: 5rem;
+    text-align: center;
+    gap: 1rem;
+  } 
+  .learn-text > p{
+    font-size: 1rem;
+    width: 80%;
+  }
+  
+.learn-heading > p{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.learn-heading > p > span{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.learn-cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+}
+
+  /* <!----------------------------------- sapana:  what will learn section ends here   -------------> */
+/* <!----------------------------------- shibli:  bonus section start here   -------------> */
+
+.bonus-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  background-color: var(--border-certified);
+
+}
+.bonus{
+  width: 90%;
+display: flex;
+flex-direction: column;
+gap: 4rem;
+margin: 3rem 0;
+}
+.bonus-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.bonus-heading > h1{
+  font-weight: 700;
+  margin: 0;
+}
+.str1{
+  font-size: 60px;
+}
+.str2{
+  font-size: 50px;
+}
+.str3{
+  font-size: 40px;
+}
+.str4{
+  font-size: 30px;
+}
+
+.bonus-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.bonus-box-container{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+}
+.bonus-box-container > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 12.5rem;
+  border-radius: 12px;
+  /* align-items: center; */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 1rem 1rem;
+text-align: center;
+height: 14rem;
+}
+.bonus-box-container > div > h2{
+font-size: 19px;
+
+}
+.bonus-box-container > div > p{
+  font-size: 12px;
+
+}
+@media screen and (max-width:600px){
+  .bonus-container{
+    margin-top: 3rem;
+  }
+
+  .bonus{
+    width: 90%;
+  gap: 3rem;
+  margin: 2rem 0;
+  }
+  .bonus-heading{
+    gap: 0.5rem;
+  }
+  .bonus-heading > h1{
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .str1{
+    font-size: 30px;
+  }
+  .str2{
+    font-size: 25px;
+  }
+  .str3{
+    font-size: 20px;
+  }
+  .str4{
+    font-size: 10px;
+  }
+  .bonus-content{
+    gap: 1rem;
+  }
+  .bonus-box-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  
+  }
+  .bonus-box-container > div{
+    width: 14.5rem;
+    height: 15rem;
+    border-radius: 10px;
+  }
+}
+/* <!----------------------------------- shibli:  bonus section ends here   -------------> */
 
   /* <!----------------------------------- sajid:  image and FAQ section start here   -------------> */
 /* sajid classroom section */
@@ -319,3 +594,360 @@
       overflow: hidden;
     } 
   }
+
+  
+
+/* FAQ section -  */
+.faqs-section {
+  width: 100vw;
+  padding: 50px 0;
+  background-color: #F5F5F5;
+
+}
+
+.faqs-container {
+  margin: 0 12rem;
+  text-align: center;
+
+}
+
+.faq-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #212529;
+
+}
+
+.faq-heading span {
+  background: linear-gradient(100deg, #F3BD00 37.5%, #F38300 71.34%);
+  font-family: "satisfy";
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 500;
+
+
+}
+
+.faq-quest-container {
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  padding: 5px 20px;
+  border-bottom: 2px solid #F5F5F5;
+  color: #212529;
+}
+
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  cursor: pointer;
+}
+
+.faq-question h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.fa-chevron-down {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  border: 2px solid #F5F5F5;
+  border-radius: 50%;
+  padding: 0.8rem 0.9rem;
+  rotate: calc(0deg);
+}
+
+.faq-quest-container p {
+  font-weight: 400;
+  font-size: 1rem;
+  display: none;
+  text-align: left;
+  width: 90%;
+}
+
+
+@media (max-width: 768px) {
+  .faqs-container {
+    margin: 0 2rem;
+  }
+
+  .faq-quest-container {
+    padding: 5px 10px;
+  }
+
+  .img_class {
+    width: 100%;
+  }
+
+  .faq-heading {
+    font-size: 2rem;
+  }
+
+  .faq-heading span {
+    font-size: 2.5rem;
+  }
+
+  .faq-question h3 {
+    text-align: start;
+  }
+
+  .faq-quest-container h3 {
+    font-size: 1rem;
+  }
+
+  .fa-chevron-down {
+    font-size: 1rem;
+  }
+
+  .faq-quest-container p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Add this CSS for smaller screens */
+@media (max-width: 576px) {
+  .faqs-container {
+    margin: 0 1rem;
+  }
+
+  .faq-quest-container {
+    padding: 5px 10px;
+  }
+
+  .faq-heading {
+    font-size: 1.8rem;
+  }
+
+  .faq-heading span {
+    font-size: 2.2rem;
+  }
+
+  .faq-question h3 {
+    text-align: start;
+  }
+
+  .faq-quest-container h3 {
+    font-size: 0.9rem;
+  }
+
+  .fa-chevron-down {
+    font-size: 1rem;
+  }
+
+  .faq-quest-container p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Add this CSS for even smaller screens */
+@media (max-width: 375px) {
+  .faqs-container {
+    margin: 0 0.5rem;
+  }
+
+  .faq-quest-container {
+    padding: 5px 10px;
+  }
+
+  .faq-heading {
+    font-size: 1.5rem;
+  }
+
+  .faq-question h3 {
+    text-align: start;
+  }
+
+  .faq-heading span {
+    font-size: 1.8rem;
+  }
+
+  .faq-quest-container h3 {
+    font-size: 0.8rem;
+  }
+
+  .fa-chevron-down {
+    font-size: 0.9rem;
+  }
+
+  .faq-quest-container p {
+    font-size: 0.7rem;
+  }
+}
+
+
+/* <!----------------------------------- sajid:  image and FAQ section ends here   -------------> */
+
+
+/* <!----------------------------------- saad: connect with us section start here   -------------> */
+
+
+.inquiries {
+  background-color: #2E2F2F;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-us {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.contact {
+  color: white;
+
+}
+
+.contact h1 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 22px;
+}
+
+.contact-button {
+  padding: 18px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: x-large;
+  background-color: #f3be00;
+  cursor: pointer;
+  border: none;
+}
+
+@media all and (max-width: 600px) {
+  .contact-us {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 2rem;
+  }
+
+  .contact h1 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .contact p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contact-button {
+    padding: 18px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #f3be00;
+    cursor: pointer;
+  }
+}
+
+/* fooeter section : shibli */
+.logo img {
+  /* height: 18rem; */
+  width: 18rem;
+
+}
+
+.tech-div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tech-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+
+}
+
+.tech-innerdiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.tech-mail {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid gray;
+}
+
+.footer p {
+  margin-bottom: 0px;
+}
+
+@media all and (max-width: 600px) {
+  .logo img {
+    width: 18rem;
+  }
+
+  .tech-innerdiv {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address > p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .address p br {
+    display: none;
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+  }
+
+  .tech-mail p {
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+}
