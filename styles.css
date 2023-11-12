@@ -1,0 +1,321 @@
+/* Global */
+
+:root {
+    --darkblue: #0948b4;
+    --white: white;
+    --yellow: #ffd124;
+    --lightblue: #4474C6;
+    --lightbluecertified: #F3F9FF;
+    --border: #ABB3BB;
+    --border-certified: #E6ECF3;
+    --certified-font: #2E2F2F;
+    --font-color: rgb(24, 24, 223);
+    --span-color: rgb(232, 196, 12);
+  
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  
+  .container-fluid {
+    padding: 0px;
+    margin: 0;
+  }
+  
+  #pay-btn {
+    background-color: var(--yellow);
+    color: black;
+    border: 0px;
+    /* padding: 16px 32px; */
+    border-radius: 8px;
+    width: 155px;
+    /* font-size: 18px; */
+    font-weight: 700;
+    transition: background-color 0.1s, color 0.1s;
+  }
+  
+  #pay-btn:hover {
+    background-color: var(--yellow);
+    color: black;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  #pay-btn:active {
+    background-color: #2E2E2E;
+    color: yellow;
+  }
+  
+  .span-text-style {
+    background: linear-gradient(100deg, #F3BD00 37.5%, #F38300 71.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Satisfy;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  
+  /* Global CSS END */
+  
+  
+/* <!----------------------------------- rehan: navbar , main section, and form start here   -------------> */
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+} 
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0.7rem 0;
+    align-items: center;
+}
+
+.time-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.timer-text {
+    font-weight: bold;
+    word-spacing: 0.1rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+.timer-text > p{
+    margin-bottom: 0px;
+}
+.timer-text p span {
+    color: red;
+  }
+.timer {
+    display: flex;
+    gap: 0.5em;
+}
+.timer > input{
+    border: 0;
+    text-align: center;
+    outline: 0;
+    font-size: 1.5rem;
+    width: 50px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    color: red;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.reserve-btn {
+    text-align: center;
+    border-radius: 12px;
+    padding: 1rem 2.1rem;
+    font-weight: bold;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #ffd124;
+    font-size: 1rem;
+    word-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  #reserve-btn:hover {
+    background-color: var(--yellow);
+    color: black;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  #reserve-btn:active {
+    background-color: #2E2E2E;
+    color: yellow;
+  }
+
+  @media screen and (max-width:600px){
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 90%;
+        padding: 1rem 0;     
+    }
+    .reserve-btn{
+        display: none;
+    }
+    .tech-logo{
+        display: flex;
+        justify-content: center;
+    }
+    .tech-logo > img{
+        width: 80%;
+    }
+    .timer-text {
+        font-weight: bold;
+        word-spacing: 0rem;
+        text-align: center;
+        font-size: 0.8rem;
+    } 
+
+    .timer > input{
+
+        font-size: 1rem;
+        width: 30px;
+        font-weight: bold;
+        color: red;
+        border-radius: 0.2rem;
+    
+    }
+  }
+
+  /* Navbar ENDS here */
+
+  .main-container{
+    background-image: url(assets/main-background.png);
+    height: 85%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .main{
+    width: 90%; 
+    display: flex;
+    align-items: center;
+  }
+
+  .main >div > h1{
+    color: white;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 70px;
+  word-spacing: 10px;
+  
+  }
+
+  .main >div > h2 {
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .main >div > h1 > span{
+    color: #F3BD00;
+  }
+
+  @media screen and (max-width:600px){
+    .main-container{
+      background-image: url(assets/main-background-respo.png);
+      height: 60%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; 
+      display: flex;
+      justify-content: center;
+    }
+    .main{
+      width: 80%; 
+    }
+    .main >div > h1{
+      text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    word-spacing: 5px; 
+    }
+
+    .main >div > h2 {
+      color: white;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+
+  /* main ENds here  */
+
+  .form {
+    background-color: var(--white);
+    width: 90%;
+    position: absolute;
+    bottom: -2.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.3rem 3rem;
+  }
+
+  .upper input {
+    border: 1px solid #576575;
+  }
+  .main-input-form{
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    width: 230px;
+    outline: 0;
+  }
+  .input-group-text {
+    border: 1px solid #576575;
+    padding: 8px 14px;
+    background-color: #fff;
+    border-right: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  
+  }
+
+  #form-btn > button{
+    padding: 0.5rem 2rem;
+  }
+/* <!----------------------------------- saad:  mentor section start here   -------------> */
+
+/* <!----------------------------------- saad:  mentor section ends here   -------------> */
+
+
+
+
+  /* <!----------------------------------- sajid:  image and FAQ section start here   -------------> */
+/* sajid classroom section */
+  .classroom_img{
+    width: 100%; 
+    height: 70%; 
+    overflow: hidden;
+  }
+  .classroom_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width:600px){
+    .classroom_img{
+      width: 100%; 
+      height: 30%; 
+      overflow: hidden;
+    } 
+  }
