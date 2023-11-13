@@ -256,7 +256,7 @@
 
   .form {
     background-color: var(--white);
-    width: 90%;
+    width: 89%;
     position: absolute;
     bottom: -2.5rem;
     border-radius: 12px;
@@ -266,20 +266,21 @@
 
   .upper{
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
-   
+   justify-content: center;
   }
 
   .lower{
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    justify-content: center;
+    gap: 20px;
   }
 
   .error-container{
    display: flex;
    justify-content: flex-start;
-   width: 270px;
+   width: 19.5vw;
   }
   .error-container>p{
     font-size: 0.6rem;
@@ -292,8 +293,8 @@
   .main-input-form{
     border-radius: 8px;
     border: 1px solid var(--border);
-    padding: 10px 10px;
-    width: 270px;
+    padding: 12px 10px;
+    width: 19.5vw;
     outline: 0;
     font-size: 0.8rem;
   }
@@ -307,12 +308,12 @@
   }
 
   .input-group > input{
-    width: 240px;
+    width: 16.5vw;
   }
   .input-group-text {
     border: 1px solid #576575;
-    width:40px ;
-    padding: 10px 0;
+    width: 3.5vw;
+    padding: 12px 0;
     background-color: #fff;
     border-right: 0px;
     border-top-left-radius: 8px;
@@ -343,7 +344,6 @@
   }
   .form-error{
     font-size: 0.8rem;
-    opacity: 1;
     color: red;
     margin: 0;
   }
@@ -564,11 +564,11 @@ text-align: center;
 height: 14rem;
 }
 .bonus-box-container > div > h2{
-font-size: 24px;
+font-size: 22px;
 
 }
 .bonus-box-container > div > p{
-  font-size: 16px;
+  font-size: 14px;
 
 }
 @media screen and (max-width:600px){
@@ -627,6 +627,188 @@ font-size: 24px;
     }
 }
 /* <!----------------------------------- shibli:  bonus section ends here   -------------> */
+/* <!----------------------------------- saad:  mentor section start here   -------------> */
+
+
+.mentor {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* margin: 3rem 0; */
+  padding: 0;
+}
+
+.mentor-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.mentor-background {
+  width: 130rem;
+  height: 43rem;
+}
+.mentor-heading{
+  display: flex;
+  justify-content: center;
+}
+.mentor-heading>h2 {
+  color: #2E2E2E;
+  font-family: Plus Jakarta Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 40px;
+  line-height: normal;
+}
+
+.mentor-heading>h2>span {
+  background: linear-gradient(102deg, #F3BD00 62.44%, #F38300 113.95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Satisfy;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+.mentor-imgcontent {
+  width: 554px;
+  position: absolute;
+  top: 0;
+  left: 3%;
+
+}
+
+.mentor-imgcontent > img {
+  width: 554px;
+  height: 650px;
+  margin-left: 15rem;
+}
+
+.mentor-background-res {
+  display: none;
+}
+
+
+
+.mentor-imgcontent>div {
+  background-color: var(--yellow);
+  padding: 20px 0;
+  border-radius: 10px;
+  border: none;
+  width: 788px;
+  font-size: x-large;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.mentor-imgcontent>div>h3 {
+  margin-right: 5rem;
+  font-weight: 800;
+}
+
+.mentor-intro {
+  position: absolute;
+  right: 15%;
+  top: 20%;
+  width: 33%;
+
+}
+
+.mentor-intro>ul>li {
+  font-size: 25px;
+  margin-bottom: 25;
+}
+
+.mentor-intro>ul>li>span {
+  font-weight: 900;
+}
+
+@media all and (max-width: 600px) {
+
+  .mentor {
+    width: 100%;
+    gap: 3rem;
+    margin: 1.7rem 0;
+  }
+
+  .mentor-background-res {
+    display: block;
+
+  }
+
+  .mentor-background {
+    display: none;
+  }
+
+
+  .mentor-heading>h2 {
+       
+    font-size: 20px;
+
+  }
+
+  .mentor-heading>h2>span {
+    font-size: 20px;
+  }
+
+
+  .mentor-intro {
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    width: 70%;
+
+  }
+
+  .mentor-intro>ul>li {
+    font-size: 8px;
+  }
+
+  .mentor-imgcontent {
+    width: 293px;
+    position: absolute;
+    top: -3rem;
+    left: 20%;
+
+  }
+
+  .mentor-imgcontent>img {
+    width: 8rem;
+    margin-left: 3.5rem;
+  }
+
+
+  .mentor-imgcontent>div {
+    background-color: var(--yellow);
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mentor-imgcontent>div>h3 {
+    margin-right: 0rem;
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+
+}
+
+/* <!----------------------------------- saad:  mentor section ends here   -------------> */
+
 
   /* <!----------------------------------- sajid:  image and FAQ section start here   -------------> */
 /* sajid classroom section */

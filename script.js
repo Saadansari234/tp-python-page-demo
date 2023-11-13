@@ -40,7 +40,7 @@ payBtn.addEventListener("click", () => {
   let name = document.getElementById("enter-name").value.trim();
   let mobileNumber = document.getElementById("mobile-number").value;
   let email = document.getElementById("email").value;
-
+  let lower= document.querySelector(".lower")
   let error = false;
   let errorName = document.getElementById("name-error");
   let errorMobile = document.getElementById("number-error");
@@ -72,12 +72,14 @@ payBtn.addEventListener("click", () => {
     mobileNumber.length < 10 ||
     mobileNumber.length > 10
   ) {
+    lower.style.display= "flex"
     errorMobile.innerHTML = "Mobile number must have exactly 10 digits";
     errorMobile.style.color = "red";
     error = true;
   } else {
     document.getElementById("mobile-number").style.border = "1px solid #576575";
     document.getElementById("number-span").style.border = "1px solid #576575";
+
   }
 
   if (email === null || email === "") {
@@ -101,37 +103,37 @@ payBtn.addEventListener("click", () => {
 
 
 // Set the target time for the countdown
-// const targetTime = new Date(); // use current time as a starting point
-// targetTime.setHours(targetTime.getHours() + 5); // set the target time (e.g., 2 hours from now)
+const targetTime = new Date(); // use current time as a starting point
+targetTime.setHours(targetTime.getHours() + 5); // set the target time (e.g., 2 hours from now)
 
-// // Update the timer every second
-// const timerInterval = setInterval(updateTimer, 1000);
+// Update the timer every second
+const timerInterval = setInterval(updateTimer, 1000);
 
-// function updateTimer() {
-//     // Get the current time
-//     const currentTime = new Date();
+function updateTimer() {
+    // Get the current time
+    const currentTime = new Date();
 
-//     // Calculate the remaining time in milliseconds
-//     const remainingTime = targetTime - currentTime;
+    // Calculate the remaining time in milliseconds
+    const remainingTime = targetTime - currentTime;
 
-//     // Calculate hours, minutes, and seconds
-//     const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-//     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-//     const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    // Calculate hours, minutes, and seconds
+    const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-//     // Update the HTML elements
-//     document.getElementById('hours').value = formatTime(hours);
-//     document.getElementById('minutes').value = formatTime(minutes);
-//     document.getElementById('seconds').value = formatTime(seconds);
+    // Update the HTML elements
+    document.getElementById('hours').value = formatTime(hours);
+    document.getElementById('minutes').value = formatTime(minutes);
+    document.getElementById('seconds').value = formatTime(seconds);
 
-//     // Check if the countdown is complete
-//     if (remainingTime <= 0) {
-//         clearInterval(timerInterval); // Stop the timer
-//         alert('Countdown complete!');
-//     }
-// }
+    // Check if the countdown is complete
+    if (remainingTime <= 0) {
+        clearInterval(timerInterval); // Stop the timer
+        alert('Countdown complete!');
+    }
+}
 
-// function formatTime(time) {
-//     // Add leading zero if the time is less than 10
-//     return time < 10 ? '0' + time : time;
-// }
+function formatTime(time) {
+    // Add leading zero if the time is less than 10
+    return time < 10 ? '0' + time : time;
+}
