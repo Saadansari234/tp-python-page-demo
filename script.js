@@ -61,7 +61,7 @@ payBtn.addEventListener("click", () => {
   if (name === null || name === "") {
     errorName.innerHTML = "Name can't be blank";
     errorName.style.color = "red";
-    errorName.style.fontSize = "13px";
+    
     error = true;
   } else {
     document.getElementById("enter-name").style.border = "1px solid #576575";
@@ -93,3 +93,45 @@ payBtn.addEventListener("click", () => {
   }
   
 })
+
+
+
+// setting counter for reserve yoyr seat
+
+
+
+// Set the target time for the countdown
+// const targetTime = new Date(); // use current time as a starting point
+// targetTime.setHours(targetTime.getHours() + 5); // set the target time (e.g., 2 hours from now)
+
+// // Update the timer every second
+// const timerInterval = setInterval(updateTimer, 1000);
+
+// function updateTimer() {
+//     // Get the current time
+//     const currentTime = new Date();
+
+//     // Calculate the remaining time in milliseconds
+//     const remainingTime = targetTime - currentTime;
+
+//     // Calculate hours, minutes, and seconds
+//     const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+//     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+//     const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+//     // Update the HTML elements
+//     document.getElementById('hours').value = formatTime(hours);
+//     document.getElementById('minutes').value = formatTime(minutes);
+//     document.getElementById('seconds').value = formatTime(seconds);
+
+//     // Check if the countdown is complete
+//     if (remainingTime <= 0) {
+//         clearInterval(timerInterval); // Stop the timer
+//         alert('Countdown complete!');
+//     }
+// }
+
+// function formatTime(time) {
+//     // Add leading zero if the time is less than 10
+//     return time < 10 ? '0' + time : time;
+// }
