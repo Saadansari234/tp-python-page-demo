@@ -318,7 +318,7 @@ body {
 }
 
 .lower {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 20px;
 }
@@ -761,8 +761,8 @@ body {
   width: 550px;
   font-size: x-large;
   font-weight: bold;
-  position: absolute;
-  bottom: -25px;
+  /* position: absolute; */
+  /* bottom: -25px; */
   /* margin-bottom: 10px; */
 }
 .responsive-mentor-img{
@@ -777,14 +777,14 @@ display: none;
 }
 
 .mentor-background-img{
-  width: 105%;
+  width: 100%;
 }
 
 .learn-from-experts {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  position: relative;
+  margin-top: -2rem;
 }
 
 @media all and (max-width: 600px) {
@@ -807,13 +807,14 @@ display: none;
   }
 
   .learn-btn {
-    font-size: 8px;
-    width: 50%;
-    padding: 10px
+    font-size: 10px;
+    width: 14rem;
+    padding: 10px;
   }
-
+  
   .learn-from-experts {
     justify-content: center;
+    margin-top: 0;
   
   }
 }
