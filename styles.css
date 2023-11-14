@@ -679,7 +679,7 @@ font-size: 22px;
 .mentor-imgcontent {
   width: 554px;
   position: absolute;
-  top: 0;
+  top: 2rem;
   left: 3%;
 
 }
@@ -784,7 +784,8 @@ font-size: 22px;
 
   .mentor-imgcontent>img {
     width: 8rem;
-    margin-left: 3.5rem;
+    height: 11.5rem;
+    margin-left: 1rem;
   }
 
 
