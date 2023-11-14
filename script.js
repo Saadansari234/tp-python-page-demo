@@ -93,6 +93,12 @@ function handlePayment({ reference_id, email, name, mobileNo }) {
 }
 
 function callLeadApi(email, name, mobileNo, utmCampaign, utmSource) {
+  if(!utmCampaign){
+    utmCampaign="test"
+  }
+  if(!utmSource){
+    utmSource="test"
+  }
 let callToAction = "pay_499";
 const campaignName = "499_masterclass";
 
