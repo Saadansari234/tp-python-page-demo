@@ -1,393 +1,451 @@
 /* Global */
 
 :root {
-    --darkblue: #0948b4;
-    --white: white;
-    --yellow: #ffd124;
-    --lightblue: #4474C6;
-    --lightbluecertified: #F3F9FF;
-    --border: #ABB3BB;
-    --border-certified: #E6ECF3;
-    --certified-font: #2E2F2F;
-    --font-color: rgb(24, 24, 223);
-    --span-color: rgb(232, 196, 12);
-  
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Plus Jakarta Sans", sans-serif;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-  }
-  
-  
-  .container-fluid {
-    padding: 0px;
-    margin: 0;
-  }
-  
-  #pay-btn {
-    background-color: var(--yellow);
-    color: black;
-    border: 0px;
-    /* padding: 16px 32px; */
-    border-radius: 8px;
-    width: 155px;
-    /* font-size: 18px; */
-    font-weight: 700;
-    transition: background-color 0.1s, color 0.1s;
-  }
-  
-  #pay-btn:hover {
-    background-color: var(--yellow);
-    color: black;
-    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  #pay-btn:active {
-    background-color: #2E2E2E;
-    color: yellow;
-  }
-  
-  .span-text-style {
-    background: linear-gradient(100deg, #F3BD00 37.5%, #F38300 71.34%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Satisfy;
-    font-size: 48px;
-    font-weight: 400;
-  }
-  
-  /* Global CSS END */
-  
-  
+  --darkblue: #0948b4;
+  --white: white;
+  --yellow: #ffd124;
+  --lightblue: #4474C6;
+  --lightbluecertified: #F3F9FF;
+  --border: #ABB3BB;
+  --border-certified: #E6ECF3;
+  --certified-font: #2E2F2F;
+  --font-color: rgb(24, 24, 223);
+  --span-color: rgb(232, 196, 12);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+.container-fluid {
+  padding: 0px;
+  margin: 0;
+}
+
+#pay-btn {
+  background-color: var(--yellow);
+  color: black;
+  border: 0px;
+  /* padding: 16px 32px; */
+  border-radius: 8px;
+  width: 155px;
+  /* font-size: 18px; */
+  font-weight: 700;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+#pay-btn:hover {
+  background-color: var(--yellow);
+  color: black;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+}
+
+#pay-btn:active {
+  background-color: #2E2E2E;
+  color: yellow;
+}
+
+.span-text-style {
+  background: linear-gradient(100deg, #F3BD00 37.5%, #F38300 71.34%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Satisfy;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+/* Global CSS END */
+/* CSS LOADER START */
+#loader-main{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  bottom: 0;
+  background-color: #1f1e1e;
+  opacity: 0.7;
+  display: none;
+}
+
+#loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* CSS LOADER END */
+
+
 /* <!----------------------------------- rehan: navbar , main section, and form start here   -------------> */
-.header{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(245, 245, 245);
-} 
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    padding: 0.7rem 0;
-    align-items: center;
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
 }
 
-.time-container{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0.7rem 0;
+  align-items: center;
 }
+
+.time-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
 .timer-text {
-    font-weight: bold;
-    word-spacing: 0.1rem;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    text-align: center;
-    font-size: 1rem;
+  font-weight: bold;
+  word-spacing: 0.1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  font-size: 1rem;
 }
-.timer-text > p{
-    margin-bottom: 0px;
+
+.timer-text>p {
+  margin-bottom: 0px;
 }
+
 .timer-text p span {
-    color: red;
-  }
-.timer {
-    display: flex;
-    gap: 0.5em;
+  color: red;
 }
-.timer > input{
-    border: 0;
-    text-align: center;
-    outline: 0;
-    font-size: 1.5rem;
-    width: 50px;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: bold;
-    color: red;
-    border-radius: 0.5rem;
-    background-color: white;
+
+.timer {
+  display: flex;
+  gap: 0.5em;
+}
+
+.timer>input {
+  border: 0;
+  text-align: center;
+  outline: 0;
+  font-size: 1.5rem;
+  width: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  color: red;
+  border-radius: 0.5rem;
+  background-color: white;
 }
 
 .reserve-btn {
-    text-align: center;
-    border-radius: 12px;
-    padding: 1rem 2.1rem;
-    font-weight: bold;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: #ffd124;
-    font-size: 1rem;
-    word-spacing: 0.2rem;
-    text-transform: uppercase;
-    cursor: pointer;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem 2.1rem;
+  font-weight: bold;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #ffd124;
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#reserve-btn:hover {
+  background-color: var(--yellow);
+  color: black;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+}
+
+#reserve-btn:active {
+  background-color: #2E2E2E;
+  color: yellow;
+}
+
+@media screen and (max-width:600px) {
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 90%;
+    padding: 1rem 0;
   }
 
-  #reserve-btn:hover {
-    background-color: var(--yellow);
-    color: black;
-    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  #reserve-btn:active {
-    background-color: #2E2E2E;
-    color: yellow;
+  .reserve-btn {
+    display: none;
   }
 
-  @media screen and (max-width:600px){
-
-    .nav{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-content: space-between;
-        gap: 1rem;
-        width: 90%;
-        padding: 1rem 0;     
-    }
-    .reserve-btn{
-        display: none;
-    }
-    .tech-logo{
-        display: flex;
-        justify-content: center;
-    }
-    .tech-logo > img{
-        width: 80%;
-    }
-    .timer-text {
-        font-weight: bold;
-        word-spacing: 0rem;
-        text-align: center;
-        font-size: 0.8rem;
-    } 
-
-    .timer > input{
-
-        font-size: 1rem;
-        width: 30px;
-        font-weight: bold;
-        color: red;
-        border-radius: 0.2rem;
-    
-    }
-  }
-
-  /* Navbar ENDS here */
-
-  .main-container{
-    background-image: url(assets/main-background.png);
-    height: 85%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; 
+  .tech-logo {
     display: flex;
     justify-content: center;
-    position: relative;
   }
 
-  .main{
-    width: 90%; 
-    display: flex;
-    align-items: center;
+  .tech-logo>img {
+    width: 80%;
   }
 
-  .main >div > h1{
-    color: white;
+  .timer-text {
+    font-weight: bold;
+    word-spacing: 0rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .timer>input {
+
+    font-size: 1rem;
+    width: 30px;
+    font-weight: bold;
+    color: red;
+    border-radius: 0.2rem;
+
+  }
+}
+
+/* Navbar ENDS here */
+
+.main-container {
+  background-image: url(assets/main-background.png);
+  height: 85%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.main>div>h1 {
+  color: white;
   font-size: 60px;
   font-weight: 500;
   line-height: 70px;
   word-spacing: 10px;
-  
+
+}
+
+.main>div>h2 {
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.main>div>h1>span {
+  color: #F3BD00;
+}
+
+@media screen and (max-width:600px) {
+  .main-container {
+    background-image: url(assets/main-background-respo.png);
+    height: 60%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
   }
 
-  .main >div > h2 {
-    color: white;
-    font-size: 30px;
-    line-height: 50px;
+  .main {
+    width: 80%;
   }
 
-  .main >div > h1 > span{
-    color: #F3BD00;
-  }
-
-  @media screen and (max-width:600px){
-    .main-container{
-      background-image: url(assets/main-background-respo.png);
-      height: 60%;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat; 
-      display: flex;
-      justify-content: center;
-    }
-    .main{
-      width: 80%; 
-    }
-    .main >div > h1{
-      text-align: center;
+  .main>div>h1 {
+    text-align: center;
     font-size: 30px;
     font-weight: 600;
     line-height: 40px;
-    word-spacing: 5px; 
-    }
-
-    .main >div > h2 {
-      color: white;
-      font-size: 20px;
-      line-height: 50px;
-      text-align: center;
-      font-weight: 900;
-    }
+    word-spacing: 5px;
   }
 
-  /* main ENds here  */
-
-  .form {
-    background-color: var(--white);
-    width: 89%;
-    position: absolute;
-    bottom: -2.5rem;
-    border-radius: 12px;
-    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem 2.5rem 1rem 2.5rem;
+  .main>div>h2 {
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 900;
   }
-
-  .upper{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-   justify-content: center;
-  }
-
-  .lower{
-    display: none;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .error-container{
-   display: flex;
-   justify-content: flex-start;
-   width: 19.5vw;
-  }
-  .error-container>p{
-    font-size: 0.6rem;
-    font-weight: 700;
-  }
-
-  .upper input {
-    border: 1px solid #576575;
-  }
-  .main-input-form{
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    padding: 12px 10px;
-    width: 19.5vw;
-    outline: 0;
-    font-size: 0.8rem;
-  }
-  .input-group {
-    /* height: 56px; */
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0;
-  }
-
-  .input-group > input{
-    width: 16.5vw;
-  }
-  .input-group-text {
-    border: 1px solid #576575;
-    width: 3.5vw;
-    padding: 12px 0;
-    background-color: #fff;
-    border-right: 0px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-
-  #form-btn > button{
-    padding: 0.5rem 2rem;
-  }
-  
-  #error-btn > button{
-    opacity: 0;
-    padding: 0rem 2rem;
-    background-color: var(--yellow);
-    color: black;
-    border: 0px;
-    /* padding: 16px 32px; */
-    border-radius: 8px;
-    width: 155px;
-    /* font-size: 18px; */
-    font-weight: 100;
-    transition: background-color 0.1s, color 0.1s;
-  }
-  .form-error{
-    font-size: 0.8rem;
-    color: red;
-    margin: 0;
-  }
-  @media screen and (max-width:600px){
-    .form {
-      
-      width: 76%;
-      bottom: -14rem;
-      border-radius: 10px;
-    }
-    .upper{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin: 1.3rem 3rem;
-      gap: 1rem;
-    }
-    .error-container{
-      display: none;
-    }
-    #error-btn{
-      display: none;
-    }
-    .main-input-form{
-      border-radius: 6px;
-      width: 230px;
-    }
-    .input-group > input{
-      width: 190px
-    }
-    .input-group-text{
-      width: 40px;
-    }
-  }
- 
-  /* <!----------------------------------- sapana:  what will learn section starts here   -------------> */
-.learn-container{
-  display: flex;
-  justify-content: center;
- margin-top: 1rem;
 }
 
-.learn{
+/* main ENds here  */
+
+.form {
+  background-color: var(--white);
+  width: 85%;
+  position: absolute;
+  bottom: -2.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2.5rem 1rem 2.5rem;
+}
+
+.upper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lower {
+  display: none;
+  justify-content: center;
+  gap: 20px;
+}
+
+.error-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 19.5vw;
+}
+
+.error-container>p {
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.upper input {
+  border: 1px solid #576575;
+}
+
+.main-input-form {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 12px 10px;
+  width: 19.5vw;
+  outline: 0;
+  font-size: 0.8rem;
+}
+
+.input-group {
+  /* height: 56px; */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+}
+
+.input-group>input {
+  width: 16.5vw;
+}
+
+.input-group-text {
+  border: 1px solid #576575;
+  width: 3.5vw;
+  padding: 12px 0;
+  background-color: #fff;
+  border-right: 0px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#form-btn>button {
+  padding: 0.5rem 2rem;
+}
+
+#error-btn>button {
+  opacity: 0;
+  padding: 0rem 2rem;
+  background-color: var(--yellow);
+  color: black;
+  border: 0px;
+  /* padding: 16px 32px; */
+  border-radius: 8px;
+  width: 155px;
+  /* font-size: 18px; */
+  font-weight: 100;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: red;
+  margin: 0;
+}
+
+@media screen and (max-width:600px) {
+  .form {
+
+    width: 76%;
+    bottom: -14rem;
+    border-radius: 10px;
+  }
+
+  .upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.3rem 3rem;
+    gap: 1rem;
+  }
+
+  .error-container {
+    display: none;
+  }
+
+  #error-btn {
+    display: none;
+  }
+
+  .main-input-form {
+    border-radius: 6px;
+    width: 230px;
+  }
+
+  .input-group>input {
+    width: 190px
+  }
+
+  .input-group-text {
+    width: 40px;
+  }
+}
+
+/* <!----------------------------------- sapana:  what will learn section starts here   -------------> */
+.learn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.learn {
   width: 90%;
   margin-top: 5rem;
   display: flex;
@@ -396,30 +454,33 @@
   text-align: center;
   gap: 2rem;
 }
-.learn-text{
+
+.learn-text {
   display: flex;
   justify-content: center;
 }
-.learn-text > p{
+
+.learn-text>p {
   font-size: 1.5rem;
   width: 70%;
-  
+
 }
 
-.learn-text >p > span{
+.learn-text>p>span {
   color: #0948b3;
 }
-.learn-heading{
+
+.learn-heading {
   display: flex;
   justify-content: center;
 }
 
-.learn-heading > p{
+.learn-heading>p {
   font-size: 2rem;
   font-weight: 600;
 }
 
-.learn-heading > p > span{
+.learn-heading>p>span {
   background: linear-gradient(100deg, #F3BD00 37.5%, #F38300 71.34%);
   font-family: "satisfy";
   -webkit-background-clip: text;
@@ -429,14 +490,15 @@
   font-weight: 500;
 
 }
-.learn-cards{
+
+.learn-cards {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 }
 
-.learn-cards > div{
+.learn-cards>div {
   width: 14.5rem;
   display: flex;
   flex-direction: column;
@@ -450,210 +512,226 @@
   height: 17rem;
 }
 
-.learn-cards > div > h5{
+.learn-cards>div>h5 {
   font-size: 1rem;
   font-weight: 600;
 }
-.learn-cards > div > img{
+
+.learn-cards>div>img {
   width: 3rem;
   height: 3rem;
 }
-.learn-cards > div > p{
+
+.learn-cards>div>p {
   font-weight: 500;
   font-size: 0.8rem;
-  
+  word-wrap: break-word;
 }
 
-@media screen and (max-width:600px){
-  .learn-container{
-   margin-top: 12rem;
+@media screen and (max-width:600px) {
+  .learn-container {
+    margin-top: 12rem;
   }
-  .learn{
+
+  .learn {
     width: 90%;
     margin-top: 5rem;
     text-align: center;
     gap: 1rem;
-  } 
-  .learn-text > p{
+  }
+
+  .learn-text>p {
     font-size: 1rem;
     width: 80%;
   }
-  
-.learn-heading > p{
-  font-size: 1.3rem;
-  font-weight: 700;
+
+  .learn-heading>p {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .learn-heading>p>span {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+
+  .learn-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
-.learn-heading > p > span{
-  font-size: 1.7rem;
-  font-weight: 500;
-}
-.learn-cards{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-}
-
-  /* <!----------------------------------- sapana:  what will learn section ends here   -------------> */
+/* <!----------------------------------- sapana:  what will learn section ends here   -------------> */
 /* <!----------------------------------- shibli:  bonus section start here   -------------> */
 
-.bonus-container{
+.bonus-container {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
   background-color: var(--border-certified);
 
 }
-.bonus{
+
+.bonus {
   width: 90%;
-display: flex;
-flex-direction: column;
-gap: 4rem;
-margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 3rem 0;
 }
-.bonus-heading{
+
+.bonus-heading {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.bonus-heading > h1{
+
+.bonus-heading>h1 {
   font-weight: 700;
   margin: 0;
 }
-.str1{
+
+.str1 {
   font-size: 60px;
 }
-.str2{
+
+.str2 {
   font-size: 50px;
 }
-.str3{
+
+.str3 {
   font-size: 40px;
 }
-.str4{
+
+.str4 {
   font-size: 30px;
 }
 
-.bonus-content{
+.bonus-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
 }
 
-.bonus-box-container{
+.bonus-box-container {
   display: flex;
   justify-content: center;
   gap: 4rem;
 
 }
-.bonus-box-container > div{
+
+.bonus-box-container>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 350px;
+  width: 300px;
   border-radius: 12px;
   /* align-items: center; */
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-padding: 1rem 1rem;
-text-align: center;
-height: 14rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  height: 14rem;
+  /* position: relative; */
 }
-.bonus-box-container > div > h2{
-font-size: 22px;
 
+.bonus-box-container>div>h2 {
+  font-size: 22px;
 }
-.bonus-box-container > div > p{
+
+.bonus-box-container>div>p {
   font-size: 14px;
-
 }
-@media screen and (max-width:600px){
-  .bonus-container{
+
+@media screen and (max-width:600px) {
+  .bonus-container {
     margin-top: 3rem;
   }
 
-  .bonus{
+  .bonus {
     width: 90%;
-  gap: 3rem;
-  margin: 2rem 0;
+    gap: 3rem;
+    margin: 2rem 0;
   }
-  .bonus-heading{
+
+  .bonus-heading {
     gap: 0.5rem;
   }
-  .bonus-heading > h1{
+
+  .bonus-heading>h1 {
     font-weight: 500;
     font-size: 1.3rem;
     margin: 0;
   }
-  .str1{
+
+  .str1 {
     font-size: 30px;
   }
-  .str2{
+
+  .str2 {
     font-size: 25px;
   }
-  .str3{
+
+  .str3 {
     font-size: 20px;
   }
-  .str4{
+
+  .str4 {
     font-size: 10px;
   }
-  .bonus-content{
+
+  .bonus-content {
     gap: 1rem;
   }
-  .bonus-box-container{
+
+  .bonus-box-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-  
+
   }
-  .bonus-box-container > div{
-    width: 14.5rem;
+
+  .bonus-box-container>div {
+    width: 17rem;
     height: 15rem;
     border-radius: 10px;
   }
-  .bonus-box-container > div > h2{
+
+  .bonus-box-container>div>h2 {
     font-size: 20px;
-    
-    }
-    .bonus-box-container > div > p{
-      font-size: 14px;
-    
-    }
+
+  }
+
+  .bonus-box-container>div>p {
+    font-size: 14px;
+
+  }
 }
+
 /* <!----------------------------------- shibli:  bonus section ends here   -------------> */
 /* <!----------------------------------- saad:  mentor section start here   -------------> */
-
 
 .mentor {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  /* margin: 3rem 0; */
-  padding: 0;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-.mentor-content {
-  position: relative;
+.mentor-heading {
   display: flex;
   justify-content: center;
 }
 
-
-
-.mentor-background {
-  width: 130rem;
-  height: 43rem;
-}
-.mentor-heading{
-  display: flex;
-  justify-content: center;
-}
 .mentor-heading>h2 {
   color: #2E2E2E;
   font-family: Plus Jakarta Sans;
@@ -675,164 +753,86 @@ font-size: 22px;
   font-weight: 400;
 }
 
-
-.mentor-imgcontent {
-  width: 554px;
-  position: absolute;
-  top: 2rem;
-  left: 3%;
-
-}
-
-.mentor-imgcontent > img {
-  width: 554px;
-  height: 650px;
-  margin-left: 15rem;
-}
-
-.mentor-background-res {
-  display: none;
-}
-
-
-
-.mentor-imgcontent>div {
+.learn-btn {
   background-color: var(--yellow);
   padding: 20px 0;
   border-radius: 10px;
   border: none;
-  width: 788px;
+  width: 550px;
   font-size: x-large;
   font-weight: bold;
+  position: absolute;
+  bottom: -25px;
+  /* margin-bottom: 10px; */
+}
+
+.img-container {
+  width: 100%;
+}
+
+.mentor-img {
+  width: 100%;
+}
+
+.mentor-img>img {
+  width: 105%;
+}
+
+.learn-from-experts {
   display: flex;
-  justify-content: end;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-
-.mentor-imgcontent>div>h3 {
-  margin-right: 5rem;
-  font-weight: 800;
-}
-
-.mentor-intro {
-  position: absolute;
-  right: 15%;
-  top: 20%;
-  width: 33%;
-
-}
-
-.mentor-intro>ul>li {
-  font-size: 25px;
-  margin-bottom: 25;
-}
-
-.mentor-intro>ul>li>span {
-  font-weight: 900;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
 }
 
 @media all and (max-width: 600px) {
-
-  .mentor {
-    width: 100%;
-    gap: 3rem;
-    margin: 1.7rem 0;
-  }
-
-  .mentor-background-res {
-    display: block;
-
-  }
-
-  .mentor-background {
-    display: none;
-  }
-
-
   .mentor-heading>h2 {
-       
-    font-size: 20px;
 
+    font-size: 20px;
+    padding: 10px;
   }
 
   .mentor-heading>h2>span {
     font-size: 20px;
   }
 
-
-  .mentor-intro {
-    position: absolute;
-    right: 13%;
-    top: 50%;
-    width: 70%;
-
-  }
-
-  .mentor-intro>ul>li {
+  .learn-btn {
     font-size: 8px;
+    width: 41%;
+    padding: 10px
   }
 
-  .mentor-imgcontent {
-    width: 293px;
-    position: absolute;
-    top: -3rem;
-    left: 20%;
-
+  .learn-from-experts {
+    top: 7px;
   }
-
-  .mentor-imgcontent>img {
-    width: 8rem;
-    height: 11.5rem;
-    margin-left: 1rem;
-  }
-
-
-  .mentor-imgcontent>div {
-    background-color: var(--yellow);
-    padding: 5px 0;
-    border-radius: 5px;
-    border: none;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .mentor-imgcontent>div>h3 {
-    margin-right: 0rem;
-    font-weight: 800;
-    font-size: 0.8rem;
-  }
-
 }
 
 /* <!----------------------------------- saad:  mentor section ends here   -------------> */
 
 
-  /* <!----------------------------------- sajid:  image and FAQ section start here   -------------> */
+/* <!----------------------------------- sajid:  image and FAQ section start here   -------------> */
 /* sajid classroom section */
-  .classroom_img{
-    width: 100%; 
-    height: 70%; 
+.classroom_img {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.classroom_img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width:600px) {
+  .classroom_img {
+    width: 100%;
+    height: 30%;
     overflow: hidden;
   }
-  .classroom_img > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+}
 
-  @media screen and (max-width:600px){
-    .classroom_img{
-      width: 100%; 
-      height: 30%; 
-      overflow: hidden;
-    } 
-  }
 
-  
 
 /* FAQ section -  */
 .faqs-section {
@@ -1065,7 +1065,14 @@ font-size: 22px;
   font-size: x-large;
   background-color: #f3be00;
   cursor: pointer;
+  color: var(--certified-font);
   border: none;
+  text-decoration: none;
+}
+
+.contact-button a {
+  text-decoration: none;
+  color: var(--certified-font);
 }
 
 @media all and (max-width: 600px) {
@@ -1164,7 +1171,7 @@ font-size: 22px;
     align-items: center;
   }
 
-  .address > p {
+  .address>p {
     font-size: 1rem;
     font-weight: 400;
   }

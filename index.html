@@ -1,389 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>
+      Python Workshop for Rs 49 | Fundamentals and Roadmap with Industry
+      Experts.
+    </title>
 
-<head>
-  <title>
-    Python Workshop for Rs 49 | Fundamentals and Roadmap with Industry
-    Experts.
-  </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Satisfy&display=swap"
-    rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css" /> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
+  <body>
+    <!----------------------------------- rehan: navbar , main section, and form start here   ------------->
 
-  <link rel="stylesheet" href="styles.css" />
-
-</head>
-
-<body>
-  <!----------------------------------- rehan: navbar , main section, and form start here   ------------->
-
-  <header class="header">
-    <div class="nav">
-      <div class="tech-logo">
-        <img src="assets/logo.svg" alt="">
-      </div>
-      <div class="time-container">
-        <div class="timer-text">
-
-          <p>Time is running out,</p>
-          <p><span> Reserve</span> your seat now!</p>
+    <header class="header">
+      <div class="nav">
+        <div class="tech-logo">
+          <img src="assets/logo.svg" alt="" />
         </div>
-        <div class="timer">
-          <input class="hours" id="hours" value="00" readonly />
-          <input class="minutes" id="minutes" value="00" readonly />
-          <input class="seconds" id="seconds" value="00" readonly />
+        <div class="time-container">
+          <div class="timer-text">
+            <p>Time is running out,</p>
+            <p><span> Reserve</span> your seat now!</p>
+          </div>
+          <div class="timer">
+            <input class="hours" id="hours" value="00" readonly />
+            <input class="minutes" id="minutes" value="00" readonly />
+            <input class="seconds" id="seconds" value="00" readonly />
+          </div>
+        </div>
+        <div
+          class="reserve-btn"
+          id="reserve-btn"
+          id="scroll-to-payment"
+          onclick="updateCTA('register_seat')"
+        >
+          reserve your seat now
         </div>
       </div>
-      <div class="reserve-btn" id="reserve-btn" id="scroll-to-payment" onclick="updateCTA('register_seat')">
-        reserve your seat now
+    </header>
+    <!-- navbar endds here -->
+    <!-- Loader Start -->
+    <div id="loader-main">
+      <div id="loader">
+        <div class="loader"></div>
       </div>
     </div>
-  </header>
-  <!-- navbar endds here -->
+    <!-- loader end  -->
 
-  <div class="main-container">
-
-    <div class="main">
-      <div>
-        <h1>
-          Boost Your Career <br> in <span id="color">Backend</span> and <br>
-          Become a <span id="color"> Pro</span>
-        </h1>
-        <h2>Bonus Upto 24,999/-</h2>
-      </div>
-
-    </div>
-    <div class="form">
-      <div class="upper">
-        <div class="enter-name">
-          <input type="text" name="enter-name" class="main-input-form" id="enter-name" placeholder="Enter name" />
-
+    <div class="main-container">
+      <div class="main">
+        <div>
+          <h1>
+            Boost Your Career <br />
+            in <span id="color">Backend</span> and <br />
+            Become a <span id="color"> Pro</span>
+          </h1>
+          <h2>Bonus Upto 24,999/-</h2>
         </div>
+      </div>
+      <div class="form">
+        <div class="upper">
+          <div class="enter-name">
+            <input
+              type="text"
+              name="enter-name"
+              class="main-input-form"
+              id="enter-name"
+              placeholder="Enter name"
+            />
+          </div>
 
-        <div class="mobile-num">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="number-span">+91</span>
+          <div class="email form-group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="main-input-form"
+              placeholder="Enter Email"
+              required
+            />
+          </div>
+
+          <div class="mobile-num">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="number-span">+91</span>
+              </div>
+              <input
+                type="number"
+                name="mobile-number"
+                class="main-input-form"
+                id="mobile-number"
+                placeholder="Enter Mobile number"
+              />
             </div>
-            <input type="number" name="mobile-number" class="main-input-form" id="mobile-number"
-              placeholder="Enter Mobile number" />
+          </div>
 
+          <div id="form-btn">
+            <button id="pay-btn" class="form-button">Enroll Now</button>
           </div>
         </div>
-
-        <div class="email form-group">
-          <input type="email" name="email" id="email" class="main-input-form" placeholder="Enter Email" required />
-
-        </div>
-
-        <div id="form-btn">
-          <button id="pay-btn" class="form-button">Enroll Now</button>
-
-        </div>
-      </div>
-      <div class="lower">
-        <div class="error-container">
-          <p class="form-error" id="name-error"></p>
-
-        </div>
-        <div class="error-container">
-
-          <p class="form-error" id="number-error"></p>
-        </div>
-        <div class="error-container">
-
-          <p class="form-error" id="email-error"></p>
-        </div>
-        <div id="error-btn">
-          <button><!-- error buttton --></button>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-  <!----------------------------------- rehan: navbar , main section, and form ends here   ------------->
-  <!----------------------------------- sapana:  what will learn section start here   ------------->
-  <!-- sapana section -->
-  <div class="learn-container">
-    <div class="learn">
-      <div class="learn-text">
-        <p>Learn From <span>Industrty Professional</span> and <span>Expert Developers</span> to Enjoy
-          a <span>Highly Salary</span> <span>Paying
-            Job</span> </p>
-      </div>
-      <div class="learn-heading">
-        <p>What will you <span> Learn </span></p>
-      </div>
-      <div class="learn-cards">
-        <div>
-          <img src="./assets/Group 3375968.png">
-          <h5>Intro to python</h5>
-          <p>Discover the magic of React.Build your first
-            component and witness the insatant impact of your code.</p>
-        </div>
-        <div>
-          <img src="Assets/fluent_person-question-mark-24-regular.png">
-          <h5>Why learn Python</h5>
-          <p>Build a simple and easy-to-use task mangement appthat helps you visualize
-            your task and stay on top ofyour work.</p>
-        </div>
-        <div>
-          <img src="Assets/iconoir_doc-magnifying-glass.svg">
-          <h5>Fundamentals of Python</h5>
-
-          <p>Learn to style your apps with
-            fitness using CSS-in-JS libraries.Elevate the websiteyou have crafted with inline
-            CSS enhancements.</p>
-        </div>
-        <div>
-          <img src="Assets/carbon_roadmap.svg">
-          <h5>Python Roadmap</h5>
-          <p>Master the fundamental of Python to build a strong foundation for your career in Web
-            development</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!----------------------------------- sapana:  what will learn section ends here   ------------->
-
-  <!----------------------------------- shibli:  bonus section start here   ------------->
-  <div class="bonus-container">
-    <div class="bonus">
-      <div class="bonus-heading">
-        <i class="fa-solid fa-star str4" style="color:#ffd43b;"></i>
-        <i class="fa-solid fa-star str3" style="color:#ffd43b;"></i>
-        <i class="fa-solid fa-star str2" style="color:#ffd43b;"></i>
-        <i class="fa-solid fa-star str1" style="color:#ffd43b;"></i>
-        <h1>Bonuses</h1>
-        <i class="fa-solid fa-star str1" style="color:#ffd43b; "></i>
-        <i class="fa-solid fa-star str2" style="color:#ffd43b; "></i>
-        <i class="fa-solid fa-star str3" style="color:#ffd43b; "></i>
-        <i class="fa-solid fa-star str4" style="color:#ffd43b; "></i>
-
-      </div>
-      <div class="bonus-content">
-        <div class="bonus-box-container">
-          <div>
-            <h2>Future-Proof Skills:</h2>
-            <p>Our workshops focus on in-demand skills that are relevant to the future job market,helping
-              participants stay competitive in thier careers and stay ahead of the curve</p>
-
+        <div class="lower">
+          <div class="error-container">
+            <p class="form-error" id="name-error"></p>
           </div>
-          <div>
-            <h2>Practical Learning:</h2>
-            <p>Our workshops emphasise practical, hands-on learning. Participants won't just acquire
-              theoretical knowledge;they'll gain the skills and experience needed to excel in their chosen
-              field.</p>
-
+          <div class="error-container">
+            <p class="form-error" id="email-error"></p>
           </div>
-        </div>
-        <div class="bonus-box-container">
-          <div>
-            <h2>Certification and Credentials:</h2>
-            <p> Post-workshop completion participants will recieve a recognized Certification or credential
-              that can enhanve their resumes,making them more appealing to potential employers or clients.
-            </p>
-
+          <div class="error-container">
+            <p class="form-error" id="number-error"></p>
           </div>
-          <div>
-            <h2>Exclusive Discounts <br> and Offers:</h2>
-            <p>We offer exclusive discounts and access to future workshops, webinars,and events to our
-              participants to incentivise them to continue their education with us.</p>
-
-          </div>
-          <div>
-            <h2>Industry Experts:</h2>
-            <p>Boost your expertise and ensure success by receiving direct training from our seasoned IT
-              professionals who have in-depth industry knowledge and hands-on experience
-            </p>
-
-          </div>
-        </div>
-        <div class="bonus-box-container">
-          <div>
-            <h2>Interactive Q/A Session:</h2>
-            <p> Join our live Session for Interactive discussions with industry experts.Ask questions and gain valuable
-              insights from professionals with years of industry experience.
-            </p>
-          </div>
-          <div>
-            <h2>Proven Success:</h2>
-            <p> With over 15,000 people already enrolled in our workshops,We have a track record of helping individuals
-              transform thier lives.
-            </p>
+          <div id="error-btn">
+            <button><!-- error buttton --></button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!----------------------------------- shibli:  bonus section ends here   ------------->
-  <!----------------------------------- saad:  mentor section start here   ------------->
-
-  <section class="mentor">
-    <div class="mentor-heading">
-      <h2>Know Your <span>Mentor</span></h2>
-    </div>
-  
-      <div class="mentor-content">
-
-        <img class="mentor-background" src="assets/mentor-background2.png" alt="">
-        <img class="mentor-background-res" src="assets/mentor-background-responsive.png" alt="">
-        <div class="mentor-imgcontent">
-            <img src="assets/munaf sir pic.png" alt="" />
-            <div> <h3>Learn From Industry Experts</h3> </div>
-        
-        </div>
-        
-        <div class="mentor-intro">
-          <ul>
-            <li>Meet your mentor,<span> Munaf Hajir.</span></li>
-            <li>
-              With over 5 years of extensive experience in software
-              development, he has successfully led and contributed to various
-              domains such as Edtech, Fintech, and e-com.
-            </li>
-            <li>
-              His goal is to train the next generation of students so that
-              they can use his knowledge to take the digital world by storm.
-              He has helped uplift startups like Jarvis Invest, Dollarbull,
-              Credent, Mypat, Truly Financial, CStoreiQ, Sarwa, Washiteria,
-              etc.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-</section>
-
-
-
-  <!----------------------------------- saad:  mentor section ends here   ------------->
-
-  <!----------------------------------- sajid:  image and FAQ section start here   ------------->
-
-  <!--classroom image secttion -->
-  <div class="classroom_img">
-    <img class="img_class" src="assets/python-classroom.png" alt="">
-  </div>
-
-  <!-- FAQ section- saad  -->
-  <section class="faqs-section">
-    <div class="faqs-container">
-      <h1 class="faq-heading">
-        Frequently Asked <span>Question</span>
-      </h1>
-      <div class="faq-outerdiv">
-
-        <div class="faq-quest-container" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
-          <div class="faq-question">
-            <h3>Will I receive a certificate upon program completion?</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <p class="faq-answer">Absolutely, upon finishing our workshop , you'll be awarded a certificate that will
-            enhance the appeal of your resume. </p>
-        </div>
-        <div class="faq-quest-container">
-          <div class="faq-question">
-            <h3>How long does the program last, and what is the time commitment required?</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <p class="faq-answer">The Reactjs workshop will last for 3 hours during which you will learn about ReactJS and
-            get all your queries answered. </p>
-        </div>
-        <div class="faq-quest-container">
-          <div class="faq-question">
-            <h3>Can you give the profile of the trainer who will be handling the workshop?</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <p class="faq-answer">The trainer for this course is not only a seasoned professional and highly skilled but
-            has also sucessfully started multiple 8-figure startups.</p>
-        </div>
-        <div class="faq-quest-container">
-          <div class="faq-question">
-            <h3>I paid for workshop enrollment but did not receive the details.What should i do in this situation?</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <p class="faq-answer">we are sorry to learn about this.If you have already submitted your payment,please send
-            us a screenshot at info@techpaathshala.com.We will promptly confirm your payment and respond accordingly.
+    <!----------------------------------- rehan: navbar , main section, and form ends here   ------------->
+    <!----------------------------------- sapana:  what will learn section start here   ------------->
+    <!-- sapana section -->
+    <div class="learn-container">
+      <div class="learn">
+        <div class="learn-text">
+          <p>
+            Learn From <span>Industrty Professional</span> and
+            <span>Expert Developers</span> to Enjoy a
+            <span>Highly Salary</span> <span>Paying Job</span>
           </p>
         </div>
-
-      </div>
-
-
-    </div>
-
-
-  </section>
-
-  <!----------------------------------- sajid:  image and FAQ section ends here   ------------->
-
-
-  <!----------------------------------- saad: connect with us section start here   ------------->
-
-  <!-- inquiries section  -->
-  <section class="inquiries">
-    <div class="contact-us">
-      <div class="contact">
-        <h1> Connect with us</h1>
-        <p>For inquiries,reach out to us at <br> info@techpaathshala.com or call 9702332888</p>
-      </div>
-      <button class="contact-button">Limited Seats Available </button>
-    </div>
-  </section>
-  <!-- footer section  -->
-  <section class="tech-address">
-    <div class="tech-div">
-
-      <div class="logo">
-        <img src="assets/TechPaathshala_Logo.png" alt="">
-      </div>
-      <div class="tech-innerdiv">
-
-        <div class="address">
-          <i class="fa-solid fa-location-dot fa-lg" style="color: gray; margin-bottom:23px; margin-right:12px"></i>
-          <p>1st Floor Dheeraj Kawal,Lal Bahadur Shastri Rd,<br>Vikhroli West, Mumbai, Maharashtra 400079</p>
+        <div class="learn-heading">
+          <p>What will you <span> Learn </span></p>
         </div>
-        <div class="tech-mail">
-          <i class="fa-solid fa-envelope" style="color: gray; margin-right:12px"></i>
-          <p>techpaathshala@gmail.com</p>
+        <div class="learn-cards">
+          <div>
+            <img src="./assets/Group 3375968.png" />
+            <h5>Intro to python</h5>
+            <p>
+              Discover the magic of React.Build your first component and witness
+              the insatant impact of your code.
+            </p>
+          </div>
+          <div>
+            <img src="assets/fluent_person-question-mark-24-regular.png" />
+            <h5>Why learn Python</h5>
+            <p>
+              Build a simple and easy-to-use task mangement appthat helps you
+              visualize your task and stay on top ofyour work.
+            </p>
+          </div>
+          <div>
+            <img src="assets/iconoir_doc-magnifying-glass.svg" />
+            <h5>Fundamentals of Python</h5>
+
+            <p>
+              Learn to style your apps with fitness using CSS-in-JS
+              libraries.Elevate the websiteyou have crafted with inline CSS
+              enhancements.
+            </p>
+          </div>
+          <div>
+            <img src="assets/carbon_roadmap.svg" />
+            <h5>Python Roadmap</h5>
+            <p>
+              Master the fundamental of Python to build a strong foundation for
+              your career in Web development
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <div class="footer">
-    <i class="fa-regular fa-copyright" style="margin-right: 8px;"></i>
-    <p>2022 TechPathshaala.All Right Reserved</p>
-  </div>
 
+    <!----------------------------------- sapana:  what will learn section ends here   ------------->
 
-  <!----------------------------------- saad: connect with us section ends here   ------------->
+    <!----------------------------------- shibli:  bonus section start here   ------------->
+    <div class="bonus-container">
+      <div class="bonus">
+        <div class="bonus-heading">
+          <i class="fa-solid fa-star str4" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star str3" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star str2" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star str1" style="color: #ffd43b"></i>
+          <h1>Bonuses</h1>
+          <i class="fa-solid fa-star str1" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star str2" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star str3" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star str4" style="color: #ffd43b"></i>
+        </div>
+        <div class="bonus-content">
+          <div class="bonus-box-container">
+            <div>
+              <h2>Future-Proof Skills:</h2>
+              <p>
+                Our workshops focus on <br />in-demand skills that are
+                <br />relevant to the future job <br />
+                market,helping participants <br />stay competitive in thier
+                careers <br />and stay ahead of the curve.
+              </p>
+            </div>
+            <div>
+              <h2>Practical Learning:</h2>
+              <p>
+                Our workshops emphasise <br />practical, hands-on learning.
+                <br />
+                Participants won't just acquire <br />theoretical
+                knowledge;they'll gain <br />the skills and experience needed to
+                <br />excel in their chosen field.
+              </p>
+            </div>
+          </div>
+          <div class="bonus-box-container">
+            <div>
+              <h2 style="padding-top: 18px">Certification and Credentials:</h2>
+              <p>
+                Post-workshop completion <br />participants will recieve a
+                <br />recognized Certification or <br />credential that can
+                enhanve their <br />resumes,making them more <br />appealing to
+                potential employers <br />or clients.
+              </p>
+            </div>
+            <div>
+              <h2>
+                Exclusive Discounts <br />
+                and Offers:
+              </h2>
+              <p>
+                We offer exclusive discounts and <br />access to future
+                workshops,<br />
+                webinars,and events to our <br />participants to incentivise
+                them to <br />continue their education with us.
+              </p>
+            </div>
+            <div>
+              <h2>Industry Experts:</h2>
+              <p>
+                Boost your expertise and ensure <br />success by receiving
+                direct <br />training from our seasoned IT <br />professionals
+                who have in-depth <br />industry knowledge and hands-<br />on
+                experience
+              </p>
+            </div>
+          </div>
+          <div class="bonus-box-container">
+            <div>
+              <h2>Interactive Q/A Session:</h2>
+              <p>
+                Join our live Session for <br />Interactive discussions with
+                <br />industry experts.Ask questions <br />and gain valuable
+                insights from <br />professionals with years of <br />industry
+                experience.
+              </p>
+            </div>
+            <div>
+              <h2>Proven Success:</h2>
+              <p>
+                With over 15,000 people already <br />enrolled in our
+                workshops,We <br />have a track record of helping
+                <br />individuals transform thier lives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <!----------------------------------- shibli:  bonus section ends here   ------------->
+    <!----------------------------------- saad:  mentor section start here   ------------->
 
+    <section>
+      <div class="mentor">
+        <div class="mentor-heading">
+          <h2>Know Your <span>Mentor</span></h2>
+        </div>
+        <div class="mentor-content">
+          <div class="img-container">
+            <div class="mentor-img">
+              <img src="./assets/mentor-background5.svg" alt="Mentor's Image" />
+            </div>
+          </div>
+          <div class="learn-from-experts">
+            <a href="#reserve-btn">
+              <button class="learn-btn">Learn From Industry Experts</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------- saad:  mentor section ends here   ------------->
+
+    <!----------------------------------- sajid:  image and FAQ section start here   ------------->
+
+    <!--classroom image secttion -->
+    <div class="classroom_img">
+      <img class="img_class" src="assets/python-classroom.png" alt="" />
+    </div>
+
+    <!-- FAQ section- saad  -->
+    <section class="faqs-section">
+      <div class="faqs-container">
+        <h1 class="faq-heading">Frequently Asked <span>Question</span></h1>
+        <div class="faq-outerdiv">
+          <div
+            class="faq-quest-container"
+            style="border-top-left-radius: 1rem; border-top-right-radius: 1rem"
+          >
+            <div class="faq-question">
+              <h3>Will I receive a certificate upon program completion?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p class="faq-answer">
+              Absolutely, upon finishing our workshop , you'll be awarded a
+              certificate that will enhance the appeal of your resume.
+            </p>
+          </div>
+          <div class="faq-quest-container">
+            <div class="faq-question">
+              <h3>
+                How long does the program last, and what is the time commitment
+                required?
+              </h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p class="faq-answer">
+              The Reactjs workshop will last for 3 hours during which you will
+              learn about ReactJS and get all your queries answered.
+            </p>
+          </div>
+          <div class="faq-quest-container">
+            <div class="faq-question">
+              <h3>
+                Can you give the profile of the trainer who will be handling the
+                workshop?
+              </h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p class="faq-answer">
+              The trainer for this course is not only a seasoned professional
+              and highly skilled but has also sucessfully started multiple
+              8-figure startups.
+            </p>
+          </div>
+          <div class="faq-quest-container">
+            <div class="faq-question">
+              <h3>
+                I paid for workshop enrollment but did not receive the
+                details.What should i do in this situation?
+              </h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p class="faq-answer">
+              we are sorry to learn about this.If you have already submitted
+              your payment,please send us a screenshot at
+              info@techpaathshala.com.We will promptly confirm your payment and
+              respond accordingly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------- sajid:  image and FAQ section ends here   ------------->
+
+    <!----------------------------------- saad: connect with us section start here   ------------->
+
+    <!-- inquiries section  -->
+    <section class="inquiries">
+      <div class="contact-us">
+        <div class="contact">
+          <h1>Connect with us</h1>
+          <p>
+            For inquiries,reach out to us at <br />
+            info@techpaathshala.com or call 9702332888
+          </p>
+        </div>
+        <a href="#reserve-btn"
+          ><button class="contact-button">Limited Seats Available</button></a
+        >
+      </div>
+    </section>
+    <!-- footer section  -->
+    <section class="tech-address">
+      <div class="tech-div">
+        <div class="logo">
+          <img src="assets/TechPaathshala_Logo.png" alt="" />
+        </div>
+        <div class="tech-innerdiv">
+          <div class="address">
+            <i
+              class="fa-solid fa-location-dot fa-lg"
+              style="color: gray; margin-bottom: 23px; margin-right: 12px"
+            ></i>
+            <p>
+              1st Floor Dheeraj Kawal,Lal Bahadur Shastri Rd,<br />Vikhroli
+              West, Mumbai, Maharashtra 400079
+            </p>
+          </div>
+          <div class="tech-mail">
+            <i
+              class="fa-solid fa-envelope"
+              style="color: gray; margin-right: 12px"
+            ></i>
+            <p>techpaathshala@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+      <i class="fa-regular fa-copyright" style="margin-right: 8px"></i>
+      <p>2022 TechPathshaala.All Right Reserved</p>
+    </div>
+
+    <!----------------------------------- saad: connect with us section ends here   ------------->
+
+    <script src="script.js"></script>
+  <script src="https://api.nimbbl.tech/static/assets/js/checkout.js"></script>
+  </body>
 </html>
