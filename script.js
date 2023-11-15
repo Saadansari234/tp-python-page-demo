@@ -40,10 +40,14 @@ function createPayment(details) {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
-      loader.style.display = "none";
 
-      window.location.href = "thankyou.html";
+      console.log(data);
+      if (data==200) {
+        loader.style.display = "none";
+        window.location.href = "thankyou.html";
+      }else{
+        window.location.href = "index.html";
+      }
     })
     .catch((error) => console.error("Error:", error));
 }

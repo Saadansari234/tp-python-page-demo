@@ -801,8 +801,8 @@ body {
   .responsive-mentor-img {
     display: block;
     width: 105%;
+  
   }
-
   .mentor-background-img {
     display: none;
   }
@@ -812,7 +812,6 @@ body {
     font-size: 20px;
     padding: 10px;
   }
-
   .mentor-heading>h2>span {
     font-size: 20px;
   }
@@ -1169,6 +1168,10 @@ body {
   justify-content: flex-end;
   align-items: center;
 
+}
+
+.tech-mail > p{
+  margin: 0;
 }
 
 .footer {
