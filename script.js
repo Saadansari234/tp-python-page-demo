@@ -219,7 +219,7 @@ payBtn.addEventListener("click", () => {
   let errorName = document.getElementById("name-error");
   let errorMobile = document.getElementById("number-error");
   let errorEmail = document.getElementById("email-error");
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
   //reset error message
   errorName.innerHTML = "";
   errorMobile.innerHTML = "";
@@ -255,7 +255,7 @@ payBtn.addEventListener("click", () => {
     document.getElementById("number-span").style.border = "1px solid #576575";
   }
 
-  if (email === null || email === "" || !emailRegex.test(email)) {
+  if (email === null || email === "" ) {
     errorEmail.innerHTML = "Email is compulsory";
     errorEmail.style.color = "red";
     error = true;
