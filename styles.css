@@ -70,7 +70,7 @@ body {
 
 /* Global CSS END */
 /* CSS LOADER START */
-#loader-main{
+#loader-main {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -82,7 +82,7 @@ body {
   display: none;
 }
 
-#loader{
+#loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,8 +90,10 @@ body {
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -99,9 +101,15 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 /* CSS LOADER END */
 
 
@@ -276,7 +284,7 @@ body {
     display: flex;
     justify-content: center;
   }
-  
+
   .main {
     width: 80%;
   }
@@ -330,7 +338,7 @@ body {
 }
 
 .error-container>p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
@@ -765,9 +773,11 @@ body {
   /* bottom: -25px; */
   /* margin-bottom: 10px; */
 }
-.responsive-mentor-img{
-display: none;
+
+.responsive-mentor-img {
+  display: none;
 }
+
 .img-container {
   width: 100%;
 }
@@ -776,7 +786,7 @@ display: none;
   width: 100%;
 }
 
-.mentor-background-img{
+.mentor-background-img {
   width: 100%;
 }
 
@@ -788,13 +798,14 @@ display: none;
 }
 
 @media all and (max-width: 600px) {
-.responsive-mentor-img{
-  display: block;
-  width: 105%;
-}
-.mentor-background-img {
-  display: none;
-}
+  .responsive-mentor-img {
+    display: block;
+    width: 105%;
+  }
+
+  .mentor-background-img {
+    display: none;
+  }
 
   .mentor-heading>h2 {
 
@@ -811,11 +822,11 @@ display: none;
     width: 14rem;
     padding: 10px;
   }
-  
+
   .learn-from-experts {
     justify-content: center;
     margin-top: 0;
-  
+
   }
 }
 
@@ -1206,4 +1217,62 @@ display: none;
     font-weight: 400;
   }
 
+}
+
+.mainContentDisplay {
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+
+/* Thankyou Page Css */
+.parent-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #33679b;
+}
+.Thankyou-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 70%;
+  width: 70%;
+  background-color: #011427;
+  color: white;
+  border-radius: 10px;
+}
+
+.Thankyou-btn {
+  height: 4rem;
+  cursor: pointer;
+}
+
+#whatsapp-btn {
+  height: 4rem;
+  width: 155px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+  background-color: green;
+  margin-top: 10px;
+}
+
+#whatsapp-btn:hover {
+  background-color: rgb(103, 161, 103);
+  color: black;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.2);
+}
+
+#whatsapp-btn:active {
+  background-color: #2E2E2E;
+  color: green;
+}
+#click-to >h2{
+  text-align: center;
 }

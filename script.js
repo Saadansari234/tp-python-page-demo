@@ -1,3 +1,4 @@
+// APIS
 const CAMPAIGN_LEAD_API =
   "https://api.techpaathshala.com/api/v1/web/campaign/lead";
 const campaignName = "499_masterclass";
@@ -203,7 +204,7 @@ faq_question.forEach((question, index) => {
   });
 });
 
-// form validation
+
 
 const payBtn = document.getElementById("pay-btn");
 let payment_stat = "";
@@ -275,26 +276,19 @@ payBtn.addEventListener("click", () => {
   callLeadApi(email, name, mobileNumber, utmCampaign, utmSource);
 });
 
-// function closeBtn() {
-//   let close = document.getElementById("close-Btn");
-//   popupPayment.style.display = "none";
-// }
+let ctaBtn = document.querySelectorAll(".CTA-btn");
+let mainLeftContainer = document.querySelector(".main-left-container");
 
-// let ctaBtn = document.querySelectorAll(".CTA-btn");
-// let mainLeftContainer = document.querySelector(".main-left-container");
+ctaBtn.forEach((cta) => {
+  cta.addEventListener("click", function () {
+    mainLeftContainer.scrollIntoView({ behavior: "smooth" });
+  });
+});
 
-// ctaBtn.forEach((cta) => {
-//   cta.addEventListener("click", function () {
-//     mainLeftContainer.scrollIntoView({ behavior: "smooth" });
-//   });
-// });
+// CLOSE BTN START HERE
 
-// // CLOSE BTN START HERE
+function updateCTA(cta) {
+  callToAction = cta;
+}
 
-// function updateCTA(cta) {
-//   callToAction = cta;
-// }
-
-// // CTA BTN END HERE
-// ppp
-// 
+// CTA BTN END HERE
